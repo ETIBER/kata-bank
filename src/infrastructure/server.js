@@ -6,7 +6,6 @@ module.exports = function server(app, options, accountController) {
   app.use(bodyParser.json())
   app.post('/operation', function (req, res) {
     accountController.applyOperation(req.body.amount)
-
     res.send('OK')
   })
 

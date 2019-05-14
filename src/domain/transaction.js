@@ -6,14 +6,18 @@ module.exports = class Operation {
   }
 
   getAmount() {
-    return this.amount;
+    return this.amount
   }
 
   getDebtor() {
-    return this.debtor;
+    return this.debtor
   }
 
   getCreditor() {
-    return this.creditor;
+    return this.creditor
+  }
+
+  static factoryCreate(amount) {
+    return new Operation(amount)
   }
 }

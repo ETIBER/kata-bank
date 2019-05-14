@@ -1,17 +1,14 @@
-const Account = require ('../../src/domain/account')
-const Operation = require ('../../src/domain/transaction')
-const logger = require ('../../src/infrastructure/logger')
+const CreditTransaction = require('../../src/useCase/creditTransaction')
 
 module.exports = class accountController{
 
-  constructor(account) {
-    this.account = account
+  constructor(loggingRepository, accountRepository) {
+    this.loggingRepository = loggingRepository
+    this.accountRepository = accountRepository
   }
 
   applyOperation(amount){
-    const operation = new Operation(amount);
-    logger.info(amount);
-    this.account.applyOperation(operation)
+    new CreditTransaction(this.loggingRepository, this.accountRepository).execute(amount)
   }
 
   getOperation() {
