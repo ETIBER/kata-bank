@@ -1,8 +1,8 @@
 jest.mock('../src/account')
 
-import {Account} from '../src/account'
-import {Transaction} from '../src/transaction'
-import {Bank} from '../src/bank'
+import {Account} from '../../src/domain/account'
+import {Transaction} from '../../src/domain/transaction'
+import {Bank} from '../../src/domain/bank'
 
 describe('constructor', function () {
   it('should set balance to zero', () => {

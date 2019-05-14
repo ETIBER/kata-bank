@@ -1,4 +1,4 @@
-export class Transaction {
+module.exports = class Operation {
   constructor(amount, debtor, creditor) {
     this.amount = amount
     this.debtor = debtor

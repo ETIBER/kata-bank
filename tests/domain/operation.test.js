@@ -1,4 +1,4 @@
-import {Transaction} from '../src/transaction'
+import {Transaction} from '../../src/domain/transaction'
 
 describe('constructor', function () {
   it('should hold an amount', () => {

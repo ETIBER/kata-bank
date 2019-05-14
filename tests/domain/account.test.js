@@ -1,5 +1,5 @@
-import {Account} from '../src/account'
-import {Transaction} from '../src/transaction'
+import {Account} from '../../src/domain/account'
+import {Transaction} from '../../src/domain/transaction'
 
 describe('constructor', function () {
   it('should set balance to zero', () => {

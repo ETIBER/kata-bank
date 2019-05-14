@@ -1,4 +1,4 @@
-export class Account {
+module.exports = class Account {
 
   constructor(transactions = []) {
     this.transactions = transactions
