@@ -10,7 +10,7 @@ module.exports = function server(app, options, accountController) {
   })
 
   app.get('/operation', function (req, res) {
-    res.send(accountController.getOperation())
+    res.send(accountController.getTransactions())
   })
 
   app.listen(options.port, function () {
